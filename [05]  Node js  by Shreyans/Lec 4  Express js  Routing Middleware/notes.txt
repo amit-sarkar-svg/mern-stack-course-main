@@ -1,0 +1,7 @@
+Express js is a Framework & also is npm package
+express js manages everything from receving the request to and giving the response
+
+Middleware -> routes se pehle lagta hain 
+jab bhi server request accept karta hain whah se route ke beech pahuchne tak request ko beech mein rokhte hon and kuch perform karte hon to ye element Middleware hota hain 
+kind of dalla hain beech ka 
+laptop --> Middleware ---> routes ---> response

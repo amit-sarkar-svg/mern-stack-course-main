@@ -1,0 +1,18 @@
+// lec 11
+const mongoose = require('mongoose');
+
+// Mongoose ka code asyncronous hota hain 
+// esa mongdb walo ne bola hain 
+// toh mongoose ke code mein await use karna and uske parent function mein async likhna esa likhna hota hain 
+mongoose.connect(`mongodb://127.0.0.1:27017/mongopract`);
+
+// Schema matlab user ke kya kya details hone wali hain
+const userschema = mongoose.Schema({
+    name: String,
+    username: String,
+    email: String
+})
+
+// Ham models banate hai and then usi ke basis par crud operation skarte hain 
+// and ise export karte hain taki crud opertaions routes par kar sake 
+module.exports = mongoose.model("user", userschema)

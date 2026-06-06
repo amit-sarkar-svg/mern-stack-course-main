@@ -1,0 +1,13 @@
+form handling & Working of Forms 
+handle backend of form and make sure that data coming from any frontend lib,framwork etc... , we still handle it at the backend 
+
+Session & Cookie
+Hum log kucj bhi data frontend par browser par rakh sakte hain and jabh bhi ham kuch bhi request backend par karenage wo frontend par saved data automatically backend par chala jayega 
+Cookie --> seedha matlab hain data saved rakhna taki bar bar log in na karna pade etc etc..
+Session --> Login karne se logout karne tak ko Session bolte hain 
+
+Form mein ham likhte hain plain text string aur numbers ki form mein but server ko wo milta hain blob ke form mein jo readable nhi hota hain 
+blob ko wapis readable karne ke liye ye do line use hoti hain 
+#                   // Middlewares
+------------------->app.use(express.json());
+------------------->app.use(express.urlencoded({extended:true}));

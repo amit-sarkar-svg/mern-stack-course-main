@@ -1,0 +1,10 @@
+we are making a note taking webapp
+
+app.get('/', (req, res)=> {
+    fs.readdir(`./files`, (err,files)=> {
+        console.log(files);
+        //                           |---> ye uper ka files ka data key mein jayega 
+        res.render('index', {files : files})
+        //                   ^^^is naam se views mein data behja hain 
+    })
+})

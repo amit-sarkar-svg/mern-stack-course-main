@@ -1,0 +1,32 @@
+initialize a project with npm 
+express install
+
+Setting up parser for form ==>: // middleawres
+                                app.use(express.json());
+                                app.use(express.urlencoded({extended:true}))
+
+Setting up ejs for ejs pages==>:  install ejs from npm 
+                                 set ejs as a view engine
+
+Setting up public static files : matlab files like photos, videos, frontend libraries etctcte.
+-------------> path.join(__dirname, 'public') 
+            -> is line se jis directory mein ham kaam kar hain uska path dede ga and public bhi usme add kar dega 
+
+
+Dynamic Routing:
+            -->Dynamic Routing
+            -->how to get data from frontend at backend route
+
+Ham log kai baar kuch orutes dekhte hain jisme kuch siraf ek hi hissa change hota hian exmaple 
+/author/Amit
+/author/Sumit
+/author/Amrit
+/author/Gendu
+^^^^^^^ ye wala part commom hain 
+toh iss kaam ke liye ham itne saare multiple routes nhi banayenge
+procedure :  
+1) sabse pehele browser par jao 
+2)   url likho apna jo aapko chaiye and press enter
+3)   ab now ab us url route ko create karo
+3) res bhejiye kuch bhi 
+4) ab usi url ko Dynamic banane ke liye ham pehele dekhenge ki konsa part Dynamic hain and uss part ke aage route mein : lagado 

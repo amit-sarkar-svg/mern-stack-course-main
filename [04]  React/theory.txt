@@ -1,0 +1,6 @@
+props ->   props component ko reusable banata hain 
+           for example:  maan lo hamne ek card banaya toh us card ko component      mein rakh do and then uss component ko baar use karo 
+
+Callback react hook --> function hain jise jitne ho sake cache mein rakho 
+                        and rerun karne par jitna use karna hain cache mein se use karlo and jo use nhi hoga wo wese hi rahega
+                syntax ::    useCallback(function,dependencies)

@@ -1,0 +1,2 @@
+dependencies -> packages ki deoendencies
+devdependecies -> aisi dependencies jo siraf dvelopment mein kaam aaye production & deployment mein kaam na aaye 

@@ -1,0 +1,19 @@
+Authentication & Authorization 
+user ko profile dene se pehle ye check karna hota hain ki user kon hain - Authentication
+kis chiz ko karne ki permission hain ya nahi  - Authorization
+
+server har baar bhool jata hain ki aap kon ho ab kyuki server bhool jata hai ki aap kaun ho  to wo har kaam ke liye aapse puchega ki aaap kaun ho 
+iss problem ko fix karne ke liye --> cookies & sessions use hota hain 
+
+sabse pehle hame kuch chijjein sikhni hain alag alag
+i)    cookies kaise set karte hain & read karte hain 
+ii)   Bcrypt kaise use karte hain for password encryption & decryption 
+iii)  JWT kya hain and jwt mein data kaise store karen and bahar nikalein 
+
+$2b$10$aDJo3vopnFyRFyBwWztVVOjgwz7QInxC2URMc0YER26IILkXu9TLO
+aritcuno
+
+ek baar hamne cookie banayi toh browser mein ham kisi bhi route par jaye wo sath hi jayegi 
+
+Bcrypt
+JWT
