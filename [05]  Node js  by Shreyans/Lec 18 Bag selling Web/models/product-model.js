@@ -12,6 +12,7 @@ const ProductSchema = new mongoose.Schema({
     bgColor: String,
     panelColor: String,
     textColor: String,
+    description: String,
 });
 
 const Product = mongoose.model('Product', ProductSchema);
