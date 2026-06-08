@@ -6,49 +6,20 @@ const cookieParser = require("cookie-parser");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
-const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
+const multerconfig = require("./config/multerconfig");
 
 app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static("public"));
+app.use(multerconfig.single("image")); // Use the multer middleware for image uploads
 
-// Create uploads directory if it doesn't exist
-const uploadsDir = path.join(__dirname, "./public/images/uploads");
-if (!fs.existsSync(uploadsDir)) {
-  fs.mkdirSync(uploadsDir, { recursive: true });
-}
-
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, uploadsDir);
-  },
-  filename: function (req, file, cb) {
-    crypto.randomBytes(12, (err, bytes) => {
-      const fn = bytes.toString("hex") + path.extname(file.originalname);
-      cb(null, fn);
-    });
-  },
-});
-const upload = multer({ storage: storage });
 
 app.get("/", (req, res) => {
   res.render("index");
-});
-
-app.get("/test", (req, res) => {
-  res.render("test");
-});
-
-app.post("/upload", upload.single("image"), (req, res) => {
-  if (!req.file) {
-    return res.status(400).json({ error: "No file uploaded" });
-  }
-  console.log("File uploaded:", req.file);
-  res.json({ message: "File uploaded successfully", file: req.file });
 });
 
 app.get("/login", (req, res) => {
