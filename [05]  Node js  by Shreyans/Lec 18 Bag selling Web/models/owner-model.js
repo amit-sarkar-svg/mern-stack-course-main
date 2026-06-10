@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+
 const OwnerSchema = new mongoose.Schema({
     fullName: {
         type: String,
