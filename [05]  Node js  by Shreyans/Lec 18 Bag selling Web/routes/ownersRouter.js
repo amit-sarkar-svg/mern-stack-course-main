@@ -19,9 +19,9 @@ if (process.env.NODE_ENV === "development") {
     let { fullName, email, password } = req.body;
 
     let createdOwner = await ownerModel.create({
-        fullName, 
-        email, 
-        password,
+      fullName, 
+      email, 
+      password,
     });
 
     res.status(201).send(createdOwner);
