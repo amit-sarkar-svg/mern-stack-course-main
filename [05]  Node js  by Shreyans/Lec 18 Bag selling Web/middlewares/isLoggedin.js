@@ -10,6 +10,7 @@ module.exports = async (req, res, next) => {
     try{
         let decoded = jwt.verify(req.cookies.token, process.env.JWT_SECRET)
         req.user = await userModel.findById(decoded.id)
+        let user = await userModel
             .findOne({email: decoded.email})
             .select('-password')
         req.user = user;
