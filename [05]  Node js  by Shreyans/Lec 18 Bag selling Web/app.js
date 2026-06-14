@@ -6,6 +6,8 @@ const mongoose = require("mongoose");
 const ownerRouter = require("./routes/ownersRouter");
 const userRouter = require("./routes/userRouter");
 const productRouter = require("./routes/productsRouter");
+const expressSession = require("express-session");
+const flash = require("connect-flash");
 
 require("dotenv").config();
 
@@ -16,6 +18,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
+app.use(
+    expressSession({
+        secret: process.env.EXPRESS_SESSION_SECRET,
+        resave: false,
+        saveUninitialized: false,
+    })
+);
+app.use(flash());
 
 app.use("/owners", ownerRouter);
 app.use("/users", userRouter);
