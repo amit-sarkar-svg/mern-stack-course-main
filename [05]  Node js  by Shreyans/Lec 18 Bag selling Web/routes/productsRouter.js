@@ -30,9 +30,11 @@ router.get('/',upload.single('image'), (req, res) => {
         textColor,
         description,
     }).then(() => {
-        res.send('product created successfully');
+        res.flash('product created successfully');
+        res.redirect('/products');
     }).catch((err) => {
-        res.send(err.message);
+        res.flash(err.message);
+        res.redirect('/products');
     });
 });
 

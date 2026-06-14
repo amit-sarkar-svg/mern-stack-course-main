@@ -9,7 +9,8 @@ router.get('/', (req, res) => {
 });
 
 router.get('/shop', isLoggedin, (req, res) => {
-    res.render('shop');
+    let products = productModel.find();
+    res.render('shop', {products});
 })
 
 
